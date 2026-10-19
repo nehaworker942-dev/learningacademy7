@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071522">
+  <meta name="description" content="Welcome to Junoonbook. Naya safar. Naya junoon. Continue to junoonbook.com.">
+  <title>Junoonbook | Welcome</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(145deg,#071522,#102d3c,#081929); background-size: 200% 200%; animation: bgMove 12s ease infinite; color: #fff; text-align: center; min-height: 100vh; min-height: 100svh; padding: 32px 16px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .card { background: linear-gradient(145deg,#ffffff0d,#ffffff04); backdrop-filter: blur(22px); border: 1px solid #7dd3fc30; border-radius: 32px; padding: 36px 28px; max-width: 420px; width: 100%; box-shadow: 0 30px 60px #0005,inset 0 1px 0 #ffffff12; position: relative; animation: enter .65s ease both; }
+    .eyebrow { color: #68dfd1; font-size: 10px; font-weight: 600; letter-spacing: 3px; margin-bottom: 15px; }
+    h1 { font-size: clamp(25px,7vw,32px); font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: #b1f5ec; background: linear-gradient(90deg,#7dd3fc,#9ff3d9); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 9px; }
+    .tagline { color: #b0c5d3; font-size: 14px; margin-bottom: 23px; }
+    .timer { display: inline-flex; gap: 7px; align-items: center; padding: 9px 19px; border-radius: 50px; background: #42d8c510; border: 1px solid #42d8c52e; color: #8fe9dc; font-size: 11px; letter-spacing: 1px; margin-bottom: 28px; }
+    .timer span { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+    .logo-circle { width: 144px; height: 144px; border-radius: 50%; margin: 0 auto 27px; position: relative; isolation: isolate; display: grid; place-items: center; box-shadow: 0 15px 35px #0005; }
+    .logo-circle:before { content: ''; position: absolute; inset: -3px; border-radius: inherit; background: conic-gradient(#38bdf8,transparent 30%,#5eead4,transparent 80%,#38bdf8); animation: spin 6s linear infinite; z-index: -2; }
+    .logo-circle:after { content: ''; position: absolute; inset: 1px; border-radius: inherit; background: linear-gradient(145deg,#183649,#091b2a); z-index: -1; }
+    .logo-circle span { font-size: 19px; font-weight: 800; letter-spacing: 1px; line-height: 1.4; color: #b6f5e9; }
+    .subs { font-size: 21px; font-weight: 650; color: #d2f8ef; margin-bottom: 9px; }
+    .check-text { font-size: 14px; line-height: 1.7; color: #a7bdcc; margin-bottom: 26px; }
+    .view-btn { display: block; padding: 16px 24px; background: linear-gradient(100deg,#38bdf8,#5eead4); color: #062332; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 10px 30px #38bdf829; position: relative; overflow: hidden; transition: transform .25s,box-shadow .25s; }
+    .view-btn:before { content: ''; position: absolute; inset: 0 auto 0 -80%; width: 60%; background: linear-gradient(90deg,transparent,#ffffff66,transparent); transition: left .6s; }
+    .view-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 35px #38bdf840; }
+    .view-btn:hover:before { left: 130%; }
+    .destination { display: inline-block; margin-top: 16px; font-size: 12px; color: #9ab9cb; text-underline-offset: 4px; }
+    .pause { display: block; background: none; border: 0; color: #9ab9cb; margin: 13px auto 0; padding: 7px; cursor: pointer; font-size: 11px; text-decoration: underline; text-underline-offset: 4px; }
+    .footer-text { border-top: 1px solid #ffffff0d; padding-top: 21px; margin-top: 19px; font-size: 11px; color: #a1c7c9; letter-spacing: 1px; line-height: 1.7; }
+    .credit { font-size: 12px; margin: 24px 0 18px; color: #8caabd; }
+    .credit a { color: #7dd3fc; text-decoration: none; }
+    .disclaimer { max-width: 650px; color: #8caabd; font-size: 11px; line-height: 1.7; }
+    a:focus-visible,button:focus-visible { outline: 2px solid #9ff3d9; outline-offset: 5px; }
+    @keyframes bgMove { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media(max-width:420px) { body { padding-top: 22px; } .card { padding: 30px 22px 26px; border-radius: 26px; } .logo-circle { width: 130px; height: 130px; } .subs { font-size: 19px; } }
+    @media(prefers-reduced-motion:reduce) { *,*:before { animation: none!important; transition: none!important; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">WELCOME TO</p>
+    <h1>Junoonbook</h1>
+    <p class="tagline">Nayi soch. Naya josh. Naya junoon.</p>
+    <div class="timer"><span id="countdown">5</span> <b id="timer-label">SECONDS TO GO</b></div>
+    <div class="logo-circle" aria-hidden="true"><span>JUNOON<br>BOOK</span></div>
+    <p class="subs">Aapka safar, aapka junoon.</p>
+    <p class="check-text">Ek nayi shuruaat ki taraf.<br>Junoonbook par aage badhein.</p>
+    <a href="https://junoonbook.com/" class="view-btn">SIGN UP NOW &#8599;</a>
+    <a href="https://junoonbook.com/" class="destination">junoonbook.com</a>
+    <button type="button" class="pause" id="pause">Pause redirect</button>
+    <p class="footer-text">PASSION. POSSIBILITIES. A NEW BEGINNING.</p>
+    <noscript><p class="check-text">Select Sign Up Now to continue to Junoonbook.</p></noscript>
+  </main>
+  <div class="credit">Ads Managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9">@Nexgroww_agency</a></div>
+  <section class="disclaimer"><strong>Disclaimer:</strong> This is an independent informational page. Use of the linked platform is at your own discretion and responsibility. No guarantees of any kind are made.</section>
+  <script>
+    (() => {
+      const link = 'https://junoonbook.com/';
+      let remaining = 5000, last = performance.now(), paused = false;
+      const el = document.getElementById('countdown');
+      const label = document.getElementById('timer-label');
+      const button = document.getElementById('pause');
+      button.addEventListener('click', () => {
+        paused = !paused;
+        last = performance.now();
+        button.textContent = paused ? 'Resume redirect' : 'Pause redirect';
+        label.textContent = paused ? 'PAUSED' : 'SECONDS TO GO';
+      });
+      function tick(now) {
+        if (!paused) remaining = Math.max(0, remaining - (now - last));
+        last = now;
+        el.textContent = Math.ceil(remaining / 1000);
+        if (remaining <= 0) { window.location.replace(link); return; }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+  <!-- Original supplied Meta Pixel retained. -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','941754581821274');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=941754581821274&amp;ev=PageView&amp;noscript=1"></noscript>
+</body>
+</html>
